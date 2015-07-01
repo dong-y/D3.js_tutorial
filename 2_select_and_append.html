@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>D3 tutorial</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+
+<body>
+
+	
+	<script>
+		var dataArray = [20, 40, 50];
+
+
+		var canvas = d3.select("body")
+					.append("svg")
+					.attr("width", 500)
+					.attr("height", 500);
+
+		var bars = canvas.selectAll("rect")
+					.data(dataArray)
+					.enter()
+						.append('rect')
+						.attr("width", function(d)  {return d * 10;})
+						.attr("height", 50)
+						.attr("color","blue")
+						.attr("y", function(d, i) {return i * 100;});
+
+
+	</script>
+
+</body>
+
+</html>
