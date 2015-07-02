@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>D3 tutorial</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+
+<body>
+
+	
+	<script>
+
+
+		var canvas = d3.select("body")
+					.append("svg")
+					.attr("width", 500)
+					.attr("height", 500);
+
+		var data = [
+			{x: 10, y: 20},
+			{x: 40, y: 50},	
+			{x: 13, y: 28},	
+		];
+
+		var group = canvas.append("g")
+						.attr("transform", "translate(100,100)");
+
+		var line = d3.svg.line()
+					.x(function (d) {return d.x;})
+					.y(function (d) {return d.y;})
+
+		group.selectAll("path")
+			.data([data])
+			.enter()
+			.append("path")
+			.attr("d", line)
+			.attr("fill", "none")
+			.attr("stroke", "black")
+			.attr("stroke-width", 10);
+
+	</script>
+
+</body>
+
+</html>
