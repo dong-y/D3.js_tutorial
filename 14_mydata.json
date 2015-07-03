@@ -2,37 +2,28 @@
 	"name": "Max",
 	"value": 100,
 	"children": [
-	{
+			{
 		"name": "Sylvia",
 		"value": 75,
-
 		"children":[
-	
-		{"name":"Craig", "value": 25},
-		{"name":"Bob", "value": 25},
-		{"name":"Cathy", "value": 25}
+				{"name":"Craig", "value": 25},
+				{"name":"Bob", "value": 25},
+				{"name":"Cathy", "value": 25}
+				]
+			},
 
-		]
-	},
-
-	{
+			{
 		"name": "David",
 		"value": 75,
-
 		"children":[
-	
-		{"name":"Jeff", "value": 25},
-		{"name":"James", "value": 25},
+				{"name":"Jeff", "value": 25},
+				{"name":"James", "value": 25}
+				]
+			},
 
-		]
-
-	}
-
-	{
-		"name": "Mr X",
-		"value": 75
-
-	}
-
+			{
+				"name": "Mr X",
+				"value": 75
+			}
 	]
 }
